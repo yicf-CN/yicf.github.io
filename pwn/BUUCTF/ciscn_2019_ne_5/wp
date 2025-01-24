@@ -1,0 +1,6 @@
+只开了NX
+验证密码administrtor
+然后看到有一个system函数，还以为是ret2libc
+找了半天没找到怎么泄露地址，shift+f12也没有什么bin/sh参数
+百度才知道，原来在fflush末尾有一个sh，不知道为什么ida里面看不到，只能用ROPgadget看
+然后32位的直接压栈溢出就行了
