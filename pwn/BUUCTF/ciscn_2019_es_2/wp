@@ -1,0 +1,4 @@
+0x30的长度，0x28的栈，溢出空间只够改一个返回地址的
+被echo flag骗了之后恼羞成怒，去寻求前辈的智慧
+https://www.cnblogs.com/xyqer/articles/16800023.html
+学到了新的知识:栈溢出
