@@ -1,0 +1,3 @@
+只开了NX，应该是ret2libc
+然后压了printf_got进去打不通，会显示[+] No libc satisfies constraints.
+上网查了一下也查不到为什么，看别人都是用read_got打的:(
