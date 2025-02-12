@@ -6,3 +6,5 @@ do_thing函数有个INT 80，记得和系统有关系，直接猜就是system("b
 atoi看起来不是啥安全的函数啊
 ----------After 5min--------
 好吧，INT80好像还要布置寄存器，我选择无脑套ret2libc板子
+
+libcsearcher查不到libc-2.23.so,不知道为什么，百度的wp全是用的本地libc，长个记性
