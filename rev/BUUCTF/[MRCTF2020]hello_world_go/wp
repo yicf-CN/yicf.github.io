@@ -1,0 +1,10 @@
+.text:000000000049A40A loc_49A40A:                             ; CODE XREF: main_main+292↓j
+.text:000000000049A40A                 lea     rdx, aFlagHelloWorld ; "flag{hello_world_gogogo}"
+.text:000000000049A411                 mov     [rsp+0B0h+typ], rdx
+.text:000000000049A415                 mov     [rsp+0B0h+var_A8], 18h
+.text:000000000049A41E                 mov     [rsp+0B0h+a.array], rax
+.text:000000000049A423                 mov     [rsp+0B0h+a.len], rcx
+.text:000000000049A428                 call    runtime_cmpstring
+.text:000000000049A42D                 cmp     [rsp+0B0h+a.cap], 0
+.text:000000000049A433                 jge     loc_49A518
+.text:000000000049A439                 mov     rax, 0FFFFFFFFFFFFFFFFh
