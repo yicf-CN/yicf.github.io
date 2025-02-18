@@ -1,0 +1,2 @@
+直接传shellcode就行
+call rax有点意思,感觉就是jmp rax?
