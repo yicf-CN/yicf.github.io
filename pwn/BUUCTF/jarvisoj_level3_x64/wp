@@ -1,0 +1,3 @@
+ret2libc板子，但是64位没有pop rdx|ret,也就是说只能构造write(1,write_got,?)
+注意到read用完后rdx=0x200，也就是说不管rdx构造出来的是write(1,write_got,0x200)
+只读前8位就行了，后面的不用管
