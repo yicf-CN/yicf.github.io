@@ -1,0 +1,4 @@
+init直接明示了是ret2libc
+开了canary和NX
+思路就是用gift中的字符串漏洞泄露canary，然后vuln套ret2libc板子
+试偏移还得是高效的湿件枚举:)
